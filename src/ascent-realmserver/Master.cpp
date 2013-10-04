@@ -18,7 +18,6 @@
  */
 
 #include "RStdAfx.h"
-#include "../ascent-shared/svn_revision.h"
 
 Database * Database_Character;
 Database * Database_World;
@@ -33,7 +32,7 @@ int main(int argc, char *argv[])
     /* Print Banner */
 	Log.Notice("Server", "==============================================================");
 	Log.Notice("Server", "| Codename Ascent Cluster - Realm Server                     |");
-	Log.Notice("Server", "| Version 0.1, Revision %04u                                 |", BUILD_REVISION);
+	Log.Notice("Server", "| Version 0.1, Revision 494                                  |");
 	Log.Notice("Server", "==============================================================");
 	Log.Line();
 

@@ -18,7 +18,6 @@
  */
 
 #include "StdAfx.h"
-#include "svn_revision.h"
 
 #ifdef CLUSTERING
 

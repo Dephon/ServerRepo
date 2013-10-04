@@ -28,7 +28,8 @@
     #include <cstring>
 #endif
 
-#include <svn_revision.h>
+#define BUILD_REVISION 494
+
 #define SCRIPTLIB_HIPART(x) ((x >> 16))
 #define SCRIPTLIB_LOPART(x) ((x & 0x0000ffff))
 #define SCRIPTLIB_VERSION_MINOR (BUILD_REVISION % 1000)

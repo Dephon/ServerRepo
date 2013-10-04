@@ -19,7 +19,6 @@
 
 #include "StdAfx.h"
 #include "AuthCodes.h"
-#include "svn_revision.h"
 
 bool VerifyName(const char * name, size_t nlen)
 {
@@ -890,15 +889,6 @@ void WorldSession::FullLogin(Player * plr)
 
 	// Send MOTD
 	_player->BroadcastMessage(sWorld.GetMotd());
-
-	// Send revision (if enabled)
-#ifdef WIN32
-	_player->BroadcastMessage("Server: %sAspireCore %s r%u/%s-Win-%s %s(www.aspiredev.org)", MSG_COLOR_WHITE, BUILD_TAG,
-		BUILD_REVISION, CONFIG, ARCH, MSG_COLOR_LIGHTBLUE);		
-#else
-	_player->BroadcastMessage("Server: %sAspireCore %s r%u/%s-%s %s(www.aspiredev.org)", MSG_COLOR_WHITE, BUILD_TAG,
-		BUILD_REVISION, PLATFORM_TEXT, ARCH, MSG_COLOR_LIGHTBLUE);
-#endif
 
 	if(sWorld.SendStatsOnJoin)
 	{

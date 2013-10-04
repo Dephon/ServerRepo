@@ -19,13 +19,11 @@
 
 #include "StdAfx.h"
 
-#define BANNER "AspireCore %s r%u/%s-%s-%s :: World Server"
+#define BANNER "AspireCore r494 %s-%s-%s :: World Server"
 
 #ifndef WIN32
 #include <sched.h>
 #endif
-
-#include "svn_revision.h"
 
 #include <signal.h>
 
@@ -169,7 +167,7 @@ bool Master::Run(int argc, char ** argv)
 		sLog.m_screenLogLevel = 1;
 	}
 
-	printf(BANNER, BUILD_TAG, BUILD_REVISION, CONFIG, PLATFORM_TEXT, ARCH);
+	printf(BANNER, CONFIG, PLATFORM_TEXT, ARCH);
 #ifdef REPACK
 	printf("\nRepack: %s | Author: %s | %s\n", REPACK, REPACK_AUTHOR, REPACK_WEBSITE);
 #endif
